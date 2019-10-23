@@ -1,6 +1,28 @@
 .header {
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    height: 100px;
+    background-color: black;
+    margin-bottom: 50px;
 }
+
+.container {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.title-appear {
+    opacity: 0;
+    transform: translateY(45px);
+}
+
+.title-appear-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s 1s, transform 1s 2s;
+}
+

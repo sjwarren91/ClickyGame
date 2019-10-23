@@ -1,0 +1,19 @@
+.content {
+    background-image: url("/background.png");
+    background-size: cover;
+    min-width: 1024px;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+@media screen and (max-width: 1024px) {
+    .content {
+        left: 50%;
+        margin-left: -512px;
+    }
+}

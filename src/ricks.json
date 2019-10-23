@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Rick Sanchez",
+        "image": "RickSanchez.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Doofus Rick",
+        "image": "DoofusRick.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Tiny Rick",
+        "image": "TinyRick.png"
+    }
+]
