@@ -1,28 +1,36 @@
 .header {
-    width: 100%;
     display: flex;
     justify-content: center;
-    height: 100px;
-    background-color: black;
-    margin-bottom: 50px;
 }
 
 .container {
-    width: 80vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: white;
+    background-color: black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 2px 3px rgb(0, 0, 0) ;
+    margin-bottom: 50px;
+    padding: 0px 20px 0px 20px;
 }
 
 .title-appear {
     opacity: 0;
-    transform: translateY(45px);
+    transform: translateY(300px) scale(2);
+    height: 400px,
+    
 }
 
 .title-appear-active {
     opacity: 1;
-    transform: translateY(0);
-    transition: opacity 1s 1s, transform 1s 2s;
+    transform: translateY(0) scale(1);
+    height: 200px;
+    transition: opacity 1s 1s, transform 1.5s 2s ease;
+}
+
+#logo {
+    height: 200px;
 }
 

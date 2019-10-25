@@ -1,21 +1,21 @@
-import React, { useState } from "react";
-import { CSSTransition } from "react-transition-group";
+import React from "react";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import "./NavBar.css";
 
 function NavBar({ message, score, topScore }) {
-    const [inProp, setInProp] = useState(false);
-
-    return (
-        <div className="header">
-            <div className="container">
-                <CSSTransition appear={true} timeout={200} classNames="title">
-                    <div>Click and Morty</div>
-                </CSSTransition>
-                <div>Message</div>
-                <div>Score</div>
+  return (
+    <div className="header">
+      <div className="container">
+        <TransitionGroup>
+          <CSSTransition appear={true} timeout={4000} classNames="title">
+            <div>
+              <img id="logo" src="/logo.png" alt="Logo" />
             </div>
-        </div>
-    );
+          </CSSTransition>
+        </TransitionGroup>
+      </div>
+    </div>
+  );
 }
 
 export default NavBar;

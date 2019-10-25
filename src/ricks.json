@@ -2,16 +2,19 @@
     {
         "id": 1,
         "name": "Rick Sanchez",
-        "image": "RickSanchez.jpg"
+        "image": "RickSanchez.jpg",
+        "clicked": false
     },
     {
         "id": 2,
         "name": "Doofus Rick",
-        "image": "DoofusRick.jpg"
+        "image": "DoofusRick.jpg",
+        "clicked": false
     },
     {
         "id": 3,
         "name": "Tiny Rick",
-        "image": "TinyRick.png"
+        "image": "TinyRick.png",
+        "clicked": false
     }
 ]

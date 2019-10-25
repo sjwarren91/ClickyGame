@@ -7,3 +7,16 @@
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 5px;
 }
+
+.container-appear {
+  opacity: 0;
+}
+
+.container-appear-active {
+  opacity: 1;
+  transition: opacity 0.5s 4s linear;
+}
+
+.card:hover {
+  cursor: pointer;
+}
