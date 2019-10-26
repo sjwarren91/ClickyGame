@@ -16,5 +16,41 @@
         "name": "Tiny Rick",
         "image": "TinyRick.png",
         "clicked": false
+    },
+    {
+        "id": 4,
+        "name": "Pickle Rick",
+        "image": "PickleRick.png",
+        "clicked": false
+    },
+    {
+        "id": 5,
+        "name": "Toxic Rick",
+        "image": "ToxicRick.jpg",
+        "clicked": false
+    },
+    {
+        "id": 6,
+        "name": "Evil Rick",
+        "image": "EvilRick.jpg",
+        "clicked": false
+    },
+    {
+        "id": 7,
+        "name": "Quantum Rick",
+        "image": "QuantumRick.png",
+        "clicked": false
+    },
+    {
+        "id": 8,
+        "name": "Cop Rick",
+        "image": "CopRick.jpg",
+        "clicked": false
+    },
+    {
+        "id": 9,
+        "name": "Rick D. Sanchez III",
+        "image": "RickDSanchez.png",
+        "clicked": false
     }
 ]

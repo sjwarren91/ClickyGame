@@ -12,12 +12,14 @@ class App extends Component {
     tracker: true,
     score: 0,
     topScore: 0,
-    
+    maxScore: 9,
+    message: "",
   };
 
   clickHandler = id => {
     const newRicks = this.state.ricks.map(rick => {
       if (rick.id === id && !rick.clicked) {
+        this.handleCorrect();
         return {...rick, clicked: true};
       } else if (rick.id === id) {
         return rick;
@@ -28,10 +30,31 @@ class App extends Component {
     })
 
     this.setState({
-      ricks: newRicks
+      ricks: newRicks,
     })
-    console.log(this.state.ricks)
-    console.log(newRicks);
+    
+  }
+
+  handleCorrect = () => {
+    this.setState({tracker: true})
+
+    if (this.state.score + 1 > this.state.topScore) {
+      this.setState({topScore: this.state.score + 1})
+    }
+
+    if (this.state.score + 1 >= this.state.maxScore) {
+      this.setState({
+        score: this.state.score + 1,
+        message: "Congrats, you clicked all the Ricks!"
+      })
+
+    } else {
+      this.setState({
+        score: this.state.score + 1,
+        message: "Correct!"
+      })
+
+    }
   }
 
   render() {
@@ -39,6 +62,7 @@ class App extends Component {
       <div>
         <NavBar />
         <Content />
+        <div className="state">Score: {this.state.score} || Top Score: {this.state.topScore}</div>
         <TransitionGroup>
           <CSSTransition appear={true} timeout={7000} classNames={"container"}>
             <div className="card-container">
