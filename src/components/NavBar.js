@@ -9,7 +9,7 @@ function NavBar({ message, score, topScore }) {
         <TransitionGroup>
           <CSSTransition appear={true} timeout={4000} classNames="title">
             <div>
-              <img id="logo" src="/logo.png" alt="Logo" />
+              <img id="logo" src="./logo.png" alt="Logo" />
             </div>
           </CSSTransition>
         </TransitionGroup>

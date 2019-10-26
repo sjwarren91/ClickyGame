@@ -52,5 +52,23 @@
         "name": "Rick D. Sanchez III",
         "image": "RickDSanchez.png",
         "clicked": false
+    },
+    {
+        "id": 10,
+        "name": "Rick D-99",
+        "image": "RickD99.png",
+        "clicked": false
+    },
+    {
+        "id": 11,
+        "name": "Commander Rick",
+        "image": "CommanderRick.png",
+        "clicked": false
+    },
+    {
+        "id": 12,
+        "name": "Cool Rick",
+        "image": "CoolRick.png",
+        "clicked": false
     }
 ]

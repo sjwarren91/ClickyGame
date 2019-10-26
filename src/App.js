@@ -12,7 +12,7 @@ class App extends Component {
     tracker: true,
     score: 0,
     topScore: 0,
-    maxScore: 9,
+    maxScore: 12,
     message: "Welcome! Click Ricks to earn points, but only click each Rick once!"
   };
 
@@ -25,7 +25,7 @@ class App extends Component {
     } else {
       message.classList.add("wiggle");
       setTimeout(this.unanimate, 820);
-      
+
     }
   }
 
