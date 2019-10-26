@@ -13,17 +13,38 @@ class App extends Component {
     score: 0,
     topScore: 0,
     maxScore: 9,
-    message: "Welcome! Click a Rick to start!"
+    message: "Welcome! Click Ricks to earn points, but only click each Rick once!"
   };
+
+  animate = correct => {
+    let message = document.getElementsByClassName("messageP")[0];
+
+    if (correct) {
+      message.classList.add("slide");
+      setTimeout(this.unanimate, 1000);
+    } else {
+      message.classList.add("wiggle");
+      setTimeout(this.unanimate, 820);
+      
+    }
+  }
+
+  unanimate = () => {
+    let message = document.getElementsByClassName("messageP")[0];
+    message.classList.remove("slide");
+    message.classList.remove("wiggle");
+  }
 
   clickHandler = id => {
     let track = false;
     const newRicks = this.state.ricks.map(rick => {
       if (rick.id === id && !rick.clicked) {
         track = true;
+        this.animate(track);
         return { ...rick, clicked: true };
       } else if (rick.id === id) {
         track = false;
+        this.animate(track);
         return rick;
       } else {
         return rick;
@@ -47,6 +68,8 @@ class App extends Component {
         score: this.state.score + 1,
         message: "Congrats, you clicked all the Ricks!"
       });
+      setTimeout(this.reset("Click a Rick to play again!"), 1500)
+
     } else {
       const shuffled = this.shuffleRicks(ricks);
       this.setState({
@@ -58,14 +81,12 @@ class App extends Component {
   };
 
   handleIncorrect = () => {
-    const newRicks = this.state.ricks.map(rick => {
-      return { ...rick, clicked: false };
-    });
-    this.setState({
-      ricks: newRicks,
-      message: "Incorrect! Remember to only click each Rick once!",
-      score: 0
-    });
+    this.reset("Incorrect! Remember to only click each Rick once!")
+    setTimeout(() => {
+      this.setState({
+        message: "Try again! Click each Rick once!"
+      })
+    }, 1500);
   };
 
   shuffleRicks = ricks => {
@@ -75,6 +96,18 @@ class App extends Component {
     }
     return ricks;
   };
+
+  reset = (message) => {
+    const newRicks = this.state.ricks.map(rick => {
+      return { ...rick, clicked: false };
+    });
+
+    this.setState({
+      ricks: newRicks,
+      message: message,
+      score: 0
+    })
+  }
 
   render() {
     return (
@@ -87,7 +120,9 @@ class App extends Component {
               <div className="state">
                 Score: {this.state.score} || Top Score: {this.state.topScore}
               </div>
-              <div className="message">{this.state.message}</div>
+              <div className="message">
+                <p className="messageP">{this.state.message}</p>
+              </div>
             </div>
           </CSSTransition>
           <CSSTransition appear={true} timeout={6000} classNames={"container"}>

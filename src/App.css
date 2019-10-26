@@ -19,6 +19,7 @@
 
 .state, .message {
   width: 20vw;
+  height: 60px;
   display: flex;
   padding: 25px; 
   justify-content: center;
@@ -34,6 +35,7 @@
   font-size: 24px;
   align-items: center;
   color: white;
+  text-align: center;
 }
 
 .container-appear {
@@ -47,4 +49,55 @@
 
 .card:hover {
   cursor: pointer;
+}
+
+.messages-appear {
+  opacity: 0;
+  transform: translateY(-15px)
+}
+
+.messages-appear-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s, transform 1s;
+}
+
+.slide {
+  animation: slide 1s ease;
+  color: greenyellow;
+}
+
+.wiggle {
+  animation: wiggle 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  color: red;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wiggle {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
