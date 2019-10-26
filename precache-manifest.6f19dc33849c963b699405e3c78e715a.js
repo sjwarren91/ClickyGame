@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "486e5e96c1ab71ae78da3b0a2e417aa9",
+    "revision": "0b07a7bb5dc2dd840d65dae7147ba3f8",
     "url": "/ClickandMorty/index.html"
   },
   {
-    "revision": "8abcadf09423a0348b0f",
+    "revision": "481edf5f9a3457219bf2",
     "url": "/ClickandMorty/static/css/main.1e10e316.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ClickandMorty/static/js/2.c9bf7561.chunk.js"
   },
   {
-    "revision": "8abcadf09423a0348b0f",
-    "url": "/ClickandMorty/static/js/main.afff95a6.chunk.js"
+    "revision": "481edf5f9a3457219bf2",
+    "url": "/ClickandMorty/static/js/main.f036c8a4.chunk.js"
   },
   {
     "revision": "cb2b7c51992c6ba74ae3",
