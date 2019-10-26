@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/ClickandMorty/static/css/main.5adfb67d.chunk.css",
-    "main.js": "/ClickandMorty/static/js/main.bca5088e.chunk.js",
-    "main.js.map": "/ClickandMorty/static/js/main.bca5088e.chunk.js.map",
+    "main.css": "/ClickandMorty/static/css/main.6bd338b6.chunk.css",
+    "main.js": "/ClickandMorty/static/js/main.ab432d6c.chunk.js",
+    "main.js.map": "/ClickandMorty/static/js/main.ab432d6c.chunk.js.map",
     "runtime-main.js": "/ClickandMorty/static/js/runtime-main.11fa51e7.js",
     "runtime-main.js.map": "/ClickandMorty/static/js/runtime-main.11fa51e7.js.map",
     "static/js/2.c9bf7561.chunk.js": "/ClickandMorty/static/js/2.c9bf7561.chunk.js",
     "static/js/2.c9bf7561.chunk.js.map": "/ClickandMorty/static/js/2.c9bf7561.chunk.js.map",
     "index.html": "/ClickandMorty/index.html",
-    "precache-manifest.07caf77046e99fbc0e428c10c039e509.js": "/ClickandMorty/precache-manifest.07caf77046e99fbc0e428c10c039e509.js",
+    "precache-manifest.4c06b06df9a16bfc3916310fbc580acd.js": "/ClickandMorty/precache-manifest.4c06b06df9a16bfc3916310fbc580acd.js",
     "service-worker.js": "/ClickandMorty/service-worker.js",
-    "static/css/main.5adfb67d.chunk.css.map": "/ClickandMorty/static/css/main.5adfb67d.chunk.css.map",
+    "static/css/main.6bd338b6.chunk.css.map": "/ClickandMorty/static/css/main.6bd338b6.chunk.css.map",
     "static/media/Content.css": "/ClickandMorty/static/media/background.3eecd69a.png"
   },
   "entrypoints": [
     "static/js/runtime-main.11fa51e7.js",
     "static/js/2.c9bf7561.chunk.js",
-    "static/css/main.5adfb67d.chunk.css",
-    "static/js/main.bca5088e.chunk.js"
+    "static/css/main.6bd338b6.chunk.css",
+    "static/js/main.ab432d6c.chunk.js"
   ]
 }
