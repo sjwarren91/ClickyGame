@@ -17,42 +17,40 @@ class App extends Component {
   };
 
   clickHandler = id => {
+    let track = false;
     const newRicks = this.state.ricks.map(rick => {
       if (rick.id === id && !rick.clicked) {
-        this.handleCorrect();
+        track = true;
         return { ...rick, clicked: true };
       } else if (rick.id === id) {
-        this.handleIncorrect();
+        track = false;
         return rick;
       } else {
         return rick;
       }
     });
 
-    this.setState({
-      ricks: newRicks
-    });
+    if (!track) {
+      this.handleIncorrect();
+    } else {
+      this.handleCorrect(newRicks);
+    }
   };
 
-  handleCorrect = () => {
-    this.setState({ tracker: true });
-
+  handleCorrect = ricks => {
     if (this.state.score + 1 > this.state.topScore) {
       this.setState({ topScore: this.state.score + 1 });
     }
 
     if (this.state.score + 1 >= this.state.maxScore) {
-      const newRicks = this.state.ricks.map(rick => {
-        return { ...rick, clicked: false };
-      });
-  
       this.setState({
-        ricks: newRicks,
         score: this.state.score + 1,
         message: "Congrats, you clicked all the Ricks!"
       });
     } else {
+      const shuffled = this.shuffleRicks(ricks);
       this.setState({
+        ricks: shuffled,
         score: this.state.score + 1,
         message: "Correct!"
       });
@@ -63,12 +61,19 @@ class App extends Component {
     const newRicks = this.state.ricks.map(rick => {
       return { ...rick, clicked: false };
     });
-
     this.setState({
       ricks: newRicks,
       message: "Incorrect! Remember to only click each Rick once!",
       score: 0
     });
+  };
+
+  shuffleRicks = ricks => {
+    for (let i = ricks.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [ricks[i], ricks[j]] = [ricks[j], ricks[i]];
+    }
+    return ricks;
   };
 
   render() {
