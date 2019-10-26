@@ -105,7 +105,8 @@ class App extends Component {
     this.setState({
       ricks: newRicks,
       message: message,
-      score: 0
+      score: 0,
+      topScore: 0
     })
   }
 
