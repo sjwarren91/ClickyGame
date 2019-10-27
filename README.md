@@ -1,5 +1,5 @@
 # ClickandMorty
-How well do you know Rick and Morty? Put your knwoledge to the test by taking this memory game.
+How well do you know Rick and Morty? Put your knowledge to the test by taking this memory game.
 
 ## What is it?
 This is a simple memorization game. The aim of the game is to click each Rick once and only once. If you click each Rick once you win, click on a rick twice and you'll have to start again!
